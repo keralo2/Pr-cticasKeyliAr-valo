@@ -1,12 +1,12 @@
 h1{
-    font-family: "Playfair Display", sefif;
+    font-family: sans-serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 7rem;
+    font-size: 1rem;
 }
 
 h2{
     font-family: "Playfair Display", serif;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1rem;
 }
