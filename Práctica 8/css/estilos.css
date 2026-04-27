@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial;
+}
+
+.header{
+    text-align: center;
+    padding: 32px;
+}
+
+/*EL CONTENEDOR PARA LOS ALIMENTOS FLEX, USAMOS FLEX WARP*/
+.container{
+    display: flex;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+/*CREA 4 COLUMNAS DE IGUAL TAMAÑO QUE SE COLOCAN UNA JUNTO A OTRA*/
+.COLUM{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.colum{
+    margin-top: 8px;
+    vertical-align: middle;
+}
