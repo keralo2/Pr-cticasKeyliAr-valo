@@ -1,0 +1,190 @@
+/*IMPORTANCIA DE FUENTES (Google Fonts)*/
+@import
+url('https://fonts.googlepis.com/css2?family=Inter:wght@300;400;700&family=Special+Elite&display=swap')
+;
+
+
+/* RESET BÁSICO (Primeros estilos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ESTILOS GENERALES (Selector de etiqueta */
+body{
+    font-family: 'Inter', sans-serif;
+    background-image: url(../img/street.jpg);
+    background-size: contain;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER Y NAVEGACIÓN */
+header{
+    background-color: #2b270b81;
+    color: #fff;
+    padding: 10px;
+    position: sticky; /*Posicionamiento sticky*/
+    top: 0;
+    z-index: 1000; /*Estes elemento estará muy por encima de cualquier otro*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.titulo{
+    font-family: 'Special+Elite', cursive; /*Fuente tipo máquina de escribir*/
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+    max-height: max-content;
+    font-size: 1.4rem;
+}
+
+/* Flexbox para menú */
+.menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.link{
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.link:hover{
+    background-color: #c0b73d;
+}
+
+/* MAIN Y SECCIONES */
+main{
+    width: 85%;
+    max-width: 1200px;
+    margin: auto; /*mismo margen a la izquierda y derecha*/
+}
+
+section{
+    margin: 40px 0; /*Separar cada sección*/
+    padding: 20px;
+    background-color: #ffffffd5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ID SELECTOR */
+#s1, #s2, #s4, #s5{
+    margin-bottom: 15px;
+    color: #584343;
+    text-align: center;
+}
+
+.imgpeq{
+    border: solid white 8px;
+    margin: 35px 0;
+    float: right; /*Que el texto envuelva la imagen*/
+    box-shadow: 0 4px 10 px rgba(0,0,0,0.1);
+}
+
+/* LISTAS */
+ul, ol{
+    margin-left: 20px;
+}
+
+li{
+    margin-bottom: 8px;
+}
+
+/* TABLA (BOX MODEL) */
+.ficha table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ficha th, .ficha td{
+    border: 1px solid #747474;
+    padding: 10px;
+}
+
+.ficha th{
+    background-color: #5e5a4b;
+    color: white;
+}
+
+/* FORMULARIO */
+.centrado{
+    text-align: center;
+}
+
+form{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 5px;
+}
+
+input{
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* BOTÓN */
+input[type="submit"]{
+    background-color: #7e724b;
+    color: white;
+    border: none;
+    cursor:pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover{
+    background-color: #4b3d0c;
+}
+
+/* GALERÍA (Grid + Flexbox alternativo) */
+.galeria{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.contenedor-galeria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-content: center;
+    justify-content: center;
+}
+
+.galeria img {
+    width: 30%;
+    height: 300px;
+    object-fit: cover; /*overflow control*/
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.galeria img:hover{
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    margin-top: 40px;
+}
