@@ -1,0 +1,134 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugios - Cobertura Total</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Barra de Navegación con iconos distribuidos -->
+    <nav class="navbar">
+        <div class="nav-icons-wrapper">
+            <span>🏠</span><span>⚙️</span><span>📍</span><span>🛡️</span><span>👥</span><span>❤️</span>
+        </div>
+    </nav>
+
+    <main class="main-wrapper">
+        <!-- Título y Botón -->
+        <header class="header">
+            <div class="title-text">
+                <h1>¿Buscas dónde <span>refugiarte?</span></h1>
+                <p>Conoce los refugios más cercanos a tu ubicación.</p>
+            </div>
+            <button class="btn-filter" onclick="toggleModal()">FILTAR REFUGIOS</button>
+        </header>
+
+        <!-- Sección de Tarjetas y Ola -->
+        <section class="shelter-section">
+            <div class="wave-bg">
+                <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                    <path fill="#5e7d9a" d="M0,192 C360,120 1080,120 1440,192 L1440,320 L0,320 Z"></path>
+                </svg>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="image-box" style="background-image: url('img/camas.jpg');"></div>
+                    <div class="card-caption">
+                        <h3>Albergue Misericordia</h3>
+                        <a href="#">Más información</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-box" style="background-image: url('img/hombre.jpg');"></div>
+                    <div class="card-caption">
+                        <h3>Albergue Divina Misericordia</h3>
+                        <a href="#">Más información</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image-box" style="background-image: url('img/refudio.jpg');"></div>
+                    <div class="card-caption">
+                        <h3>Albergue Katia Miranda</h3>
+                        <a href="#">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal con los dos apartados -->
+    <div id="locationModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleModal()">&times;</span>
+            
+            <!-- APARTADO 1: Departamentos -->
+            <div id="view-departments">
+                <h2>¿Dónde te encuentras?</h2>
+                <div class="locations-grid">
+                    <ul class="location-column">
+                        <li onclick="showAhuachapan()" style="cursor:pointer; color:#ffeb3b; font-weight:bold;">Ahuachapán</li>
+                        <li>Cabañas</li><li>Chalatenango</li><li>Cuscatlán</li><li>La Libertad</li><li>La Paz</li><li>La Unión</li><li>Morazán</li><li>San Miguel</li><li>San Salvador</li><li>San Vicente</li>
+                    </ul>
+                    <ul class="location-column">
+                        <li>Santa Ana</li><li>Sonsonate</li><li>Usulután</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- APARTADO 2: Refugios (Estilo image_4.png) -->
+            <div id="view-shelters" style="display: none;">
+                <div class="shelter-header">
+                    <button class="back-arrow" onclick="showDepartments()">➔</button>
+                </div>
+                <div class="shelters-scroll-container" id="ahuachapan-list">
+                    <!-- Aquí se inyecta la info con JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const ahuachapanData = [
+            { nombre: "GIMNASIO LOS PINITOS", dirc: "Ave morazan, 6ta calle poniente final y barrio san juan de Dios", tel: "7736-9467" },
+            { nombre: "CASA COMUNAL APANECA", dirc: "Barrio el Centro Apaneca", tel: "7380-4612" },
+            { nombre: "CASA COMUNAL ATACO", dirc: "Bo. El Centro 3era calle Ote, frente a parque municipal de Ataco", tel: "7577-7205" },
+            { nombre: "CASA COMUNAL GUAYMANGO", dirc: "Barrio el centro, frente a centro educativo de guaymango", tel: "6985-9635" },
+            { nombre: "CASA COMUNAL EL MANGO", dirc: "Distrito Municipal, n1 el mango", tel: "7889-8708" },
+            { nombre: "NUEVO AMANECER", dirc: "Km 113, carretera litoral a la frontera, colonia Nuevo Amanecer", tel: "7627-5788" },
+            { nombre: "CASA COMUNAL SAN PEDRO PUXTLA", dirc: "1ra Calle poniente, avenida central sur - Barrio San Pablo", tel: "7059-8000" },
+            { nombre: "PREDIO DEL MERCADO", dirc: "Av. Cuscatlan, barrio el centro, predio municipal, tacuba", tel: "7886-6785" },
+            { nombre: "CASA COMUAL VALLE LA PUERTA", dirc: "Canton valle la puerta, caserio la puerta, tacuba", tel: "7672-5256" }
+        ];
+
+        function toggleModal() {
+            const modal = document.getElementById('locationModal');
+            modal.classList.toggle('active');
+            if(!modal.classList.contains('active')) showDepartments();
+        }
+
+        function showAhuachapan() {
+            document.getElementById('view-departments').style.display = 'none';
+            const listContainer = document.getElementById('ahuachapan-list');
+            
+            listContainer.innerHTML = ahuachapanData.map(item => `
+                <div class="shelter-info-block">
+                    <h3 class="pink-title">${item.nombre}</h3>
+                    <div class="info-row"><span class="blue-icon">📍</span><strong>Ubicación</strong><p>${item.dirc}</p></div>
+                    <div class="info-row"><span class="blue-icon">📞</span><strong>Contacto</strong><p>+503 ${item.tel}</p></div>
+                    <div class="info-row"><span class="blue-icon">📎</span><strong>Descripción</strong><p>Brinda refugio temporal y apoyo a personas y familias afectadas por situaciones de vulnerabilidad o desastres.</p></div>
+                </div>
+            `).join('<hr class="shelter-hr">');
+            
+            document.getElementById('view-shelters').style.display = 'block';
+        }
+
+        function showDepartments() {
+            document.getElementById('view-departments').style.display = 'block';
+            document.getElementById('view-shelters').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

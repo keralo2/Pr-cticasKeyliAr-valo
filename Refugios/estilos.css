@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* NAVBAR: Iconos muy separados[cite: 2] */
+.navbar {
+    background-color: #414261;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icons-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main-wrapper {
+    padding: 25px 5% 0 5%;
+}
+
+/* HEADER: Muy cerca de las imágenes[cite: 1, 2] */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 5px;
+}
+
+h1 {
+    color: #a12644;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+h1 span {
+    font-family: 'Brush Script MT', cursive;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+p {
+    color: #333;
+    margin-top: 2px;
+}
+
+.btn-filter {
+    border: 2px solid #414261;
+    background: transparent;
+    border-radius: 25px;
+    padding: 10px 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* SECCIÓN DE LA OLA (INFINITA HACIA LOS LADOS)[cite: 1, 2] */
+.shelter-section {
+    position: relative;
+    margin-top: 15px;
+    padding-bottom: 120px;
+}
+
+.wave-bg {
+    position: absolute;
+    bottom: 0;
+    left: -10vw;
+    width: 120vw;
+    height: 480px; /* Suficientemente alta para envolver las letras[cite: 2] */
+    z-index: 1;
+}
+
+.wave-bg svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* GRID DE TARJETAS */
+.cards-grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.card {
+    flex: 1;
+    text-align: center;
+}
+
+/* IMÁGENES: Tamaño vertical de la foto[cite: 2] */
+.image-box {
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    margin-bottom: 20px;
+}
+
+/* TEXTO: Blanco sobre el azul de la ola[cite: 2] */
+.card-caption h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.card-caption a {
+    color: #d1d9e0;
+    font-style: italic;
+    font-size: 0.95rem;
+    text-decoration: underline;
+}
+
+/* Ajuste móvil */
+@media (max-width: 800px) {
+    .cards-grid { flex-direction: column; }
+    .image-box { height: 350px; }
+    .wave-bg { height: 750px; }
+}
+
+/* TUS ESTILOS ORIGINALES */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background-color: #ffffff; overflow-x: hidden; }
+
+.navbar { background-color: #414261; height: 65px; display: flex; justify-content: center; align-items: center; }
+.nav-icons-wrapper { width: 90%; max-width: 1200px; display: flex; justify-content: space-between; color: white; font-size: 1.5rem; }
+.main-wrapper { padding: 25px 5% 0 5%; }
+.header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px; }
+h1 { color: #a12644; font-size: 2.5rem; line-height: 1.1; }
+h1 span { font-family: 'Brush Script MT', cursive; font-weight: normal; font-size: 3rem; }
+p { color: #333; margin-top: 2px; }
+.btn-filter { border: 2px solid #414261; background: transparent; border-radius: 25px; padding: 10px 22px; font-weight: bold; cursor: pointer; }
+
+.shelter-section { position: relative; margin-top: 15px; padding-bottom: 120px; }
+.wave-bg { position: absolute; bottom: 0; left: -10vw; width: 120vw; height: 480px; z-index: 1; }
+.wave-bg svg { width: 100%; height: 100%; }
+
+.cards-grid { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 25px; margin-top: 10px; }
+.card { flex: 1; text-align: center; }
+.image-box { width: 100%; height: 420px; background-size: cover; background-position: center; border-radius: 30px; box-shadow: 0 10px 25px rgba(0,0,0,0.15); margin-bottom: 20px; }
+.card-caption h3 { color: white; font-size: 1.25rem; margin-bottom: 4px; text-shadow: 1px 1px 4px rgba(0,0,0,0.3); }
+.card-caption a { color: #d1d9e0; font-style: italic; font-size: 0.95rem; text-decoration: underline; }
+
+/* MODAL OSCURO */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(18, 20, 45, 0.98); display: none; justify-content: center; align-items: center; z-index: 1000; }
+.modal-overlay.active { display: flex; }
+.modal-content { color: white; width: 90%; max-width: 800px; position: relative; }
+.close-btn { position: absolute; top: -50px; right: 0; font-size: 3rem; cursor: pointer; }
+
+/* LISTA DE DEPARTAMENTOS */
+.locations-grid { display: flex; justify-content: space-between; text-align: left; padding: 0 10%; margin-top: 30px; }
+.location-column li { list-style: none; font-size: 1.2rem; margin-bottom: 15px; padding-left: 20px; position: relative; }
+.location-column li::before { content: "•"; position: absolute; left: 0; }
+
+/* DISEÑO APARTADO REFUGIOS (image_4.png) */
+.shelters-scroll-container { max-height: 70vh; overflow-y: auto; padding: 20px; background: #fff; border-radius: 20px; color: #333; }
+.back-arrow { background: none; border: none; color: white; font-size: 2rem; cursor: pointer; float: right; transform: rotate(180deg); }
+
+.shelter-info-block { padding: 20px 0; }
+.pink-title { color: #d81b60; font-size: 1.6rem; text-align: center; margin-bottom: 20px; font-weight: 800; }
+.info-row { margin-bottom: 15px; padding-left: 40px; position: relative; }
+.blue-icon { position: absolute; left: 0; color: #5e7d9a; font-size: 1.5rem; }
+.info-row strong { color: #5e7d9a; display: block; font-size: 1.1rem; }
+.info-row p { color: #333; font-size: 1rem; margin-top: 2px; line-height: 1.4; }
+.shelter-hr { border: 0; border-top: 1px solid #eee; margin: 20px 0; }
+
+@media (max-width: 800px) { .cards-grid { flex-direction: column; } .image-box { height: 350px; } }
