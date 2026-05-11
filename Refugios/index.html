@@ -32,15 +32,15 @@
             <div class="cards-grid">
                 <div class="card">
                     <div class="image-box" style="background-image: url('img/camas.jpg');"></div>
-                    <div class="card-caption"><h3>Albergue Misericordia</h3><a href="#">Más información</a></div>
+                    <div class="card-caption"><h3>Albergue Misericordia</h3></div>
                 </div>
                 <div class="card">
                     <div class="image-box" style="background-image: url('img/hombre.jpg');"></div>
-                    <div class="card-caption"><h3>Albergue Divina Misericordia</h3><a href="#">Más información</a></div>
+                    <div class="card-caption"><h3>Albergue Divina Misericordia</h3></div>
                 </div>
                 <div class="card">
                     <div class="image-box" style="background-image: url('img/refudio.jpg');"></div>
-                    <div class="card-caption"><h3>Albergue Katia Miranda</h3><a href="#">Más información</a></div>
+                    <div class="card-caption"><h3>Albergue Katia Miranda</h3></div>
                 </div>
             </div>
         </section>
@@ -54,7 +54,11 @@
                 <div class="locations-grid">
                     <ul class="location-column">
                         <li onclick="showShelters('ahuachapan')" class="li-selectable">Ahuachapán</li>
-                        <li>Cabañas</li><li>Chalatenango</li><li>Cuscatlán</li><li>La Libertad</li><li>La Paz</li>
+                        <li onclick="showShelters('cabanas')" class="li-selectable">Cabañas</li>
+                        <li onclick="showShelters('chalatenango')" class="li-selectable">Chalatenango</li>
+                        <li onclick="showShelters('cuscatlan')" class="li-selectable">Cuscatlán</li>
+                        <li onclick="showShelters('lalibertad')" class="li-selectable">La Libertad</li>
+                        <li onclick="showShelters('lapaz')" class="li-selectable">La Paz</li>
                         <li onclick="showShelters('launion')" class="li-selectable">La Unión</li>
                     </ul>
                     <ul class="location-column">
@@ -91,6 +95,46 @@
                 { nombre: "CASA COMUNAL SAN PEDRO PUXTLA", dirc: "Ahuachapán Sur | Bo. San Pablo", tel: "7059-8000", desc: "Refugio frente a la alcaldía." },
                 { nombre: "PREDIO DEL MERCADO", dirc: "Tacuba | Ahuachapán Centro", tel: "7886-6785", desc: "Predio municipal en Tacuba." },
                 { nombre: "CASA COMUNAL VALLE LA PUERTA", dirc: "Tacuba | Ahuachapán Centro", tel: "7672-5256", desc: "Refugio en zona rural de Tacuba." }
+            ],
+            cabanas: [
+                { nombre: "LAS GOLONDRINAS ILOBASCO", dirc: "Lot. La Virgen Lote 13 Polígono C, Ilobasco, Cabañas Oeste", tel: "7592-2725", desc: "Ofrece alojamiento temporal y espacio seguro (Capacidad: 30 personas)." },
+                { nombre: "POLIDEPORTIVO DE SENSUNTEPEQUE", dirc: "Barrio los remedios, col. Las brisas, Sensuntepeque", tel: "7478-4982", desc: "Áreas amplias para familias evacuadas (Capacidad: 30 personas)." },
+                { nombre: "CASA COMUNAL VICTORIA", dirc: "Barrio el centro, distrito de Victoria, Cabañas Este", tel: "7478-4982", desc: "Protección y apoyo básico en situación de riesgo (Capacidad: 40 personas)." }
+            ],
+            chalatenango: [
+                { nombre: "CASA COMUNAL CITALÁ", dirc: "Calle Manuel José Arce frente a Parque Municipal", tel: "7482-3336", desc: "Alojamiento temporal y protección (Capacidad: 40 personas)." },
+                { nombre: "S.U.M. JARDINES DEL PARAÍSO", dirc: "Calle Principal Barrio San Luis, El Paraíso", tel: "7813-4492", desc: "Espacio seguro y resguardo temporal (Capacidad: 50 personas)." },
+                { nombre: "COMPLEJO CRISTIANO LA PALMA", dirc: "Barrio La Tejera, La Palma", tel: "6456-5226", desc: "Apoyo básico y alojamiento temporal (Capacidad: 40 personas)." },
+                { nombre: "CENTRO OBRERO DR. MARIO ZAMORA", dirc: "Caserio el refugio canton el gramal", tel: "7686-0344", desc: "Espacios amplios para atender familias (Capacidad: 70 personas)." }
+            ],
+            cuscatlan: [
+                { nombre: "ACOSAMA", dirc: "Calle principal de San Pedro Perulapán", tel: "7364-9543", desc: "Alojamiento temporal y espacios seguros (Capacidad: 90 personas)." },
+                { nombre: "IGLESIA SAN RAFAEL ARCÁNGEL", dirc: "Avenida Manuel Rico, Barrio el Centro, Suchitoto", tel: "7628-6942", desc: "Protección y alojamiento temporal (Capacidad: 30 personas)." },
+                { nombre: "IGLESIA ASAMBLEA DE DIOS JEHOVÁ NISSI", dirc: "Colonia y Avenida Las Mercedes, Suchitoto", tel: "7628-6942", desc: "Apoyo comunitario y espacios seguros (Capacidad: 30 personas)." },
+                { nombre: "S.U.M. ANEXO DISTRITO SAN RAMÓN", dirc: "Barrio el Centro, calle principal, San Ramón", tel: "7396-6483", desc: "Alojamiento y condiciones básicas (Capacidad: 30 personas)." },
+                { nombre: "EL MERCADO ANEXO COMUNAL", dirc: "Barrio el centro, Santa Cruz Analquito", tel: "7693-5787", desc: "Resguardo temporal y apoyo básico (Capacidad: 32 personas)." },
+                { nombre: "CENTRO DE CONVIVENCIA CIUDADANA", dirc: "Barrio Santa Lucia, Suchitoto", tel: "6007-0429", desc: "Instalaciones amplias y seguras (Capacidad: 68 personas)." }
+            ],
+            lalibertad: [
+                { nombre: "S.U.M. WALTER THILO DEININGER", dirc: "Frente a parque de Antiguo Cuscatlán", tel: "7630-9796", desc: "Amplios espacios de resguardo (Capacidad: 150 personas)." },
+                { nombre: "CASA COMUNAL CHILTIUPÁN", dirc: "Barrio Santo Domingo, calle principal, Chiltiupán", tel: "7923-2829", desc: "Protección y apoyo básico (Capacidad: 60 personas)." },
+                { nombre: "CASA COMUNAL EL ZONTE", dirc: "Cantón el Zonte, caserío Espíritu Santo", tel: "7704-9741", desc: "Alojamiento temporal y espacios seguros (Capacidad: 40 personas)." },
+                { nombre: "S.U.M. DE COLÓN", dirc: "Parque Comunal de Colón", tel: "7853-6631", desc: "Resguardo y atención básica (Capacidad: 40 personas)." },
+                { nombre: "CASA COMUNAL LAS CONCHITAS", dirc: "Colonia las Conchitas, Colón", tel: "7853-6631", desc: "Alojamiento temporal y apoyo (Capacidad: 30 personas)." },
+                { nombre: "CASA COMUNAL COMASAGUA", dirc: "Alcaldía de Comasagua", tel: "6017-0861", desc: "Protección y espacios seguros (Capacidad: 40 personas)." },
+                { nombre: "CASA COMUNAL HUIZÚCAR", dirc: "Barrio el centro, Huizúcar", tel: "7229-5855", desc: "Resguardo temporal y atención básica (Capacidad: 50 personas)." },
+                { nombre: "IGLESIA EL CALVARIO HUIZÚCAR", dirc: "Calle principal, barrio el calvario", tel: "7794-228", desc: "Alojamiento temporal y apoyo básico (Capacidad: 70 personas)." },
+                { nombre: "CENTRO OBRERO DR. HUMBERTO ROMERO", dirc: "Playa Conchalío km 37, La Libertad", tel: "7860-2001", desc: "Alojamiento temporal y apoyo comunitario (Capacidad: 100 personas)." },
+                { nombre: "CENTRO ESCOLAR SAN ARTURO", dirc: "Cantón Cangrejera km 45.5, Puerto de la Libertad", tel: "6929-5516", desc: "Resguardo temporal y áreas seguras (Capacidad: 134 personas)." }
+            ],
+            lapaz: [
+                { nombre: "IGLESIA ESPERANZA VIVA", dirc: "Barrio el centro, Santiago Nonualco", tel: "6135-5777", desc: "Alojamiento temporal y apoyo comunitario (Capacidad: 60 personas)." },
+                { nombre: "CASA COMUNAL CANTÓN COMALAPA", dirc: "Canton Comalapa KM 32 1/2 carreteta antigua a Zacatecoluca", tel: "7270-2131", desc: "Resguardo temporal y espacios seguros (Capacidad: 80 personas)." },
+                { nombre: "ANFITEATRO LA HERRADURA", dirc: "Barrio San Luis, calle Principal", tel: "7065-3686", desc: "Áreas amplias y seguras para emergencias (Capacidad: 40 personas)." },
+                { nombre: "CASA COMUNAL LAS ISLETAS", dirc: "Canton Las Isletas, San Pedro Masahuat", tel: "7592-4144", desc: "Protección y alojamiento temporal (Capacidad: 50 personas)." },
+                { nombre: "ESCUELA DE DESARROLLO HUMANO", dirc: "Col. 27 de Septiembre, Zacatecoluca", tel: "7404-4613", desc: "Resguardo temporal y apoyo básico (Capacidad: 30 personas)." },
+                { nombre: "POLIDEPORTIVO 27 DE SEPTIEMBRE", dirc: "Col. 27 de Septiembre, Zacatecoluca", tel: "7404-4613", desc: "Instalaciones amplias para desastres naturales (Capacidad: 60 personas)." },
+                { nombre: "CENTRO DEPORTIVO EL TUCO ALFARO", dirc: "Barrio Los Remedios, Zacatecoluca", tel: "7116-1129", desc: "Espacios adaptados para el resguardo (Capacidad: 50 personas)." }
             ],
             launion: [
                 { nombre: "CASA DE RETIRO EL MELONAL", dirc: "Conchagua | La Unión Sur", tel: "2680-3301", desc: "Instalaciones amplias para numerosas familias." },
@@ -148,7 +192,7 @@
                 { nombre: "CASA COMUNAL COL. GUADALUPE", dirc: "Soyapango | S.S. Este", tel: "2292-7500", desc: "Refugio masivo disponible." },
                 { nombre: "PARQUE VENECIA", dirc: "Soyapango | S.S. Este", tel: "2292-7500", desc: "Protección a evacuados." },
                 { nombre: "C. COMUNITARIO MSOR. ROMERO", dirc: "Tonacatepeque | S.S. Este", tel: "2284-8400", desc: "Apoyo social y refugio." },
-                { nombre: "EXCLÍNICA DISTRITO ITALIA", dirc: "Tonacatepeque | S.S. Este", tel: "2284-8400", desc: "Estructura segura para protección." }
+                { nombre: "EXCLÍNICA DISTRITA ITALIA", dirc: "Tonacatepeque | S.S. Este", tel: "2284-8400", desc: "Estructura segura para protección." }
             ],
             sanvicente: [
                 { nombre: "CASA COMUNAL APASTEPEQUE", dirc: "Apastepeque | S.V. Norte", tel: "2393-7000", desc: "Protección, descanso y atención básica." },
@@ -204,9 +248,11 @@
             document.getElementById('view-departments').style.display = 'none';
             const listContainer = document.getElementById('shelters-list');
             const titulos = { 
-                ahuachapan: "Ahuachapán", launion: "La Unión", morazan: "Morazán", 
-                sanmiguel: "San Miguel", sansalvador: "San Salvador", sanvicente: "San Vicente", 
-                santaana: "Santa Ana", sonsonate: "Sonsonate", usulutan: "Usulután"
+                ahuachapan: "Ahuachapán", cabanas: "Cabañas", chalatenango: "Chalatenango",
+                cuscatlan: "Cuscatlán", lalibertad: "La Libertad", lapaz: "La Paz",
+                launion: "La Unión", morazan: "Morazán", sanmiguel: "San Miguel",
+                sansalvador: "San Salvador", sanvicente: "San Vicente", santaana: "Santa Ana",
+                sonsonate: "Sonsonate", usulutan: "Usulután"
             };
             document.getElementById('dept-title').innerText = "Refugios en " + (titulos[dept] || dept);
             listContainer.innerHTML = (data[dept] || []).map(item => `
