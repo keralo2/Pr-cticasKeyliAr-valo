@@ -80,7 +80,7 @@ section{
 }
 
 /* ID SELECTOR */
-#s1, #s2, #s4, #s5{
+#s1, #s2, #s4, #s5 {
     margin-bottom: 15px;
     color: #584343;
     text-align: center;
@@ -90,7 +90,7 @@ section{
     border: solid white 8px;
     margin: 35px 0;
     float: right; /*Que el texto envuelva la imagen*/
-    box-shadow: 0 4px 10 px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* LISTAS */
@@ -108,7 +108,7 @@ li{
     border-collapse: collapse;
 }
 
-.ficha th, .ficha td{
+.ficha th, .ficha td {
     border: 1px solid #747474;
     padding: 10px;
 }
@@ -127,7 +127,7 @@ form{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 5px;
+    width: 50%;
 }
 
 input{
@@ -139,7 +139,7 @@ input{
 }
 
 /* BOTÓN */
-input[type="submit"]{
+input[type="submit"] {
     background-color: #7e724b;
     color: white;
     border: none;
@@ -147,12 +147,12 @@ input[type="submit"]{
     margin-top: 10px;
 }
 
-input[type="submit"]:hover{
+input[type="submit"]:hover {
     background-color: #4b3d0c;
 }
 
 /* GALERÍA (Grid + Flexbox alternativo) */
-.galeria{
+.galeria {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -176,12 +176,12 @@ input[type="submit"]:hover{
     transition: transform 0.3s;
 }
 
-.galeria img:hover{
+.galeria img:hover {
     transform: scale(1.1);
 }
 
 /* FOOTER */
-footer{
+footer {
     text-align: center;
     padding: 20px;
     background-color: #000;
