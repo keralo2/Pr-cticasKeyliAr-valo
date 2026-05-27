@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Críticas</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Review Generator 3000</h1>
+        <p class="subtitle">Crea tu opinión de internet en un clic</p>
+
+        <div class="form-group">
+            <label for="juego">Videojuego/Canción/Streamer/Artista:</label>
+            <input type="text" id="juego" placeholder="Ej. Minecraft, Ibai, Valorant, Justin Bieber...">
+        </div>
+
+        <div class="form-group">
+            <label for="calificacion">Calificación:</label>
+            <input type="number" id="calificacion" min="0" max="10" placeholder="0 al 10">
+        </div>
+
+        <button id="btn-generar">Generar Review 🔥</button>
+
+        <div class="result-box">
+            <p id="resultado">Introduce los datos para ver la magia...</p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
